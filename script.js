@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    fetchMovies;
+    fetchMovies();
 })
 
 function fetchMovies () {
