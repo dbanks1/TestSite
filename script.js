@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 })
 
 function fetchMovies () {
-    var url = 'https://api.themoviedb.org/3/movie/popular';
+    var url = 'https://api.themoviedb.org/3/movie/popular/1';
     var apiKey = '?api_key=8d0895ad52684bc5aaf2a952c644aeb5';
     var movieURL = url + apiKey;
     var http = new XMLHttpRequest();
