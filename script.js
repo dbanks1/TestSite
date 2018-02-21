@@ -50,8 +50,8 @@ function displayPopMovies(moviePosters) {
     for (var i = 0; i < moviePosters.length; i++) {
         var newImg = document.createElement('img');
         newImg.id = 'moviePoster' + i;
-        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + moviePosters[3].image;
-        movieList.appendChild(newImg);
+        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + moviePosters[i].image;
+        movieList.insertBefore(newImg);
         return movieList.innerHTML;
     }
 }
