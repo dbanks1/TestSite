@@ -55,7 +55,7 @@ function displayPopMovies(popMovieArray) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
-        newImg.src = 'https://image.tmdb.org/t/p/w80_and_h120_bestv2' + popMovieArray[i].image;
+        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
     }
