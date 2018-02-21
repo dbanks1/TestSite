@@ -7,30 +7,12 @@ body {
   background-color: #1f1f1f;
 }
 
-.nav-container {
-  width: 100%;
-  padding-top: 50px;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-buttons {
-  margin-top: 20px;
-}
-
 ul {
     display: flex;
 }
 
 li {
   list-style-type: none;
-  padding: 10px 50px 10px 50px;
-  border-radius: 50px;
 }
 
 ul li img {
