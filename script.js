@@ -26,6 +26,6 @@ function addToMovieArray (data) {
     moviesToShow = data.results;
     for (var i = 0; i < moviesToShow.length; i++) {
         movieArray.push(moviesToShow[i].title);
-        console.log(movieArray[0]);
+        console.log(movieArray[i]);
     }
 }
