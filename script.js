@@ -51,7 +51,7 @@ function displayPopMovies(moviePosters) {
         var newImg = document.createElement('img');
         newImg.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + moviePosters[i].image;
-        movieList.insertBefore(newImg);
+        movieList.appendChild(newImg);
         return movieList.innerHTML;
     }
 }
