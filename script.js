@@ -31,7 +31,7 @@ function fetchPopularMovies () {
  */
 function addToPopMovieArray (data) {
     var moviesToShow = data.results;
-    for (var i = 0; i < moviesToShow.length+1; i++) {
+    for (var i = 0; i < moviesToShow.length; i++) {
         var movieInfo = {
             title: moviesToShow[i].title,
             originalTitle: moviesToShow[i].original_title,
@@ -51,7 +51,7 @@ function addToPopMovieArray (data) {
  */
 function displayPopMovies(popMovieArray) {
     var movieList = document.getElementById('movieList');
-    for (var i = 0; i < popMovieArray.length+1; i++) {
+    for (var i = 0; i < popMovieArray.length; i++) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
