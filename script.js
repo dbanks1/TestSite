@@ -25,7 +25,11 @@ function fetchPopularMovies () {
 function addToMovieArray (data) {
     moviesToShow = data.results;
     for (var i = 0; i < moviesToShow.length; i++) {
-        movieArray.push(moviesToShow[i].title);
+        var movieInfo = {
+            title: moviesToShow[i].title,
+            image: moviesToShow[i].poster_path,
+        }
+        movieArray.push(movieInfo);
         console.log(movieArray[i]);
     }
 }
