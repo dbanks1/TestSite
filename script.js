@@ -33,13 +33,13 @@ function addToPopMovieArray (data) {
             image: moviesToShow[i].poster_path,
         }
         popMovieArray.push(movieInfo);
-        console.log(popMovieArray[i]);
+        displayPopMovies(popMovieArray);
     }
 }
 
-function displayPopMovies() {
+function displayPopMovies(moviePosters) {
     var movieList = document.getElementById('movieList');
-    for (var i = 0; i < popMovieArray.length; i++) {
+    for (var i = 0; i < moviePosters.length; i++) {
         var newImg = document.createElement('img');
         newImg.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
