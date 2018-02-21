@@ -26,7 +26,7 @@ function fetchPopularMovies () {
     http.send();
 }
 /**
- * 
+ * trims the movie info and adds the data for each movie to an array as an object
  * @param {Object} data - Parsed data from the api
  */
 function addToPopMovieArray (data) {
@@ -38,13 +38,17 @@ function addToPopMovieArray (data) {
             image: moviesToShow[i].poster_path,
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
-
         }
         popMovieArray.push(movieInfo);
         displayPopMovies(popMovieArray);
     }
 }
-
+/**
+ * displays the movies by creating a new li element for each one
+ * the image source comes from the movie database
+ * i think the base url is universal and just needs a path from the api
+ * @param {Array} popMovieArray - An array of trimmed movie data
+ */
 function displayPopMovies(popMovieArray) {
     var movieList = document.getElementById('movieList');
     for (var i = 0; i < popMovieArray.length; i++) {
@@ -54,7 +58,6 @@ function displayPopMovies(popMovieArray) {
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
-        
         return movieList.innerHTML;
     }
 }
