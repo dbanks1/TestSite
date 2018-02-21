@@ -31,7 +31,7 @@ function fetchPopularMovies () {
  */
 function addToPopMovieArray (data) {
     var moviesToShow = data.results;
-    for (var i = 0; i < moviesToShow.length; i++) {
+    for (var i = 0; i <= moviesToShow.length; i++) {
         var movieInfo = {
             title: moviesToShow[i].title,
             originalTitle: moviesToShow[i].original_title,
