@@ -50,14 +50,14 @@ function addToPopMovieArray (data) {
  * @param {Array} popMovieArray - An array of trimmed movie data
  */
 function displayPopMovies(popMovieArray) {
+    var movieList = document.getElementById('movieList');
     for (var i = 0; i < popMovieArray.length; i++) {
-        var movieList = document.getElementById('movieList');
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
-        return movieList.innerHTML;
     }
+    return movieList.innerHTML;
 }
