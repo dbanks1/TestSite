@@ -50,8 +50,8 @@ function addToPopMovieArray (data) {
  * @param {Array} popMovieArray - An array of trimmed movie data
  */
 function displayPopMovies(popMovieArray) {
-    var movieList = document.getElementById('movieList');
     for (var i = 0; i < popMovieArray.length; i++) {
+        var movieList = document.getElementById('movieList');
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
