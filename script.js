@@ -24,7 +24,7 @@ function fetchPopularMovies () {
     };
     http.open('GET', movieURL, true);
     http.send();
-}
+};
 /**
  * trims the movie info and adds the data for each movie to an array as an object
  * @param {Object} data - Parsed data from the api
@@ -42,7 +42,7 @@ function addToPopMovieArray (data) {
         popMovieArray.push(movieInfo);
         displayPopMovies(popMovieArray);
     }
-}
+};
 /**
  * displays the movies by creating a new li element for each one
  * the image source comes from the movie database
@@ -57,7 +57,7 @@ function displayPopMovies(popMovieArray) {
         newListItem.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
-        movieList.insertBefore(newListItem, popMovieArray[i-1]);
+        movieList.insertBefore(newListItem, movieList.childNodes[0]);
     }
     return movieList.innerHTML;
-}
+};
