@@ -57,7 +57,7 @@ function displayPopMovies(popMovieArray) {
         newListItem.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
-        movieList.insertBefore(newListItem);
+        movieList.insertBefore(newListItem, popMovieArray[i-1]);
     }
     return movieList.innerHTML;
 }
