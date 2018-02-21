@@ -13,7 +13,7 @@ function fetchPopularMovies () {
         if (this.readyState == 4 && this.status == 200) {
             var popMovies = JSON.parse(http.responseText);
             if (popMovies != null) {
-                addToMovieArray(data);
+                addToMovieArray(popMovies);
             }
             
         }
