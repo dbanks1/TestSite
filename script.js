@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
     fetchPopularMovies();
+    displayPopMovies();
 })
 
 var popMovieArray = [];
@@ -43,5 +44,6 @@ function displayPopMovies() {
         newImg.id = 'moviePoster' + i;
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         movieList.appendChild(newImg);
+        return movieList.innerHTML;
     }
 }
