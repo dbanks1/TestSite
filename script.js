@@ -40,8 +40,8 @@ function addToPopMovieArray (data) {
             desc: moviesToShow[i].overview,
         }
         popMovieArray.push(movieInfo);
-        displayPopMovies(popMovieArray);
     }
+    displayPopMovies(popMovieArray);
 };
 /**
  * displays the movies by creating a new li element for each one
@@ -58,6 +58,6 @@ function displayPopMovies(popMovieArray) {
         newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.insertBefore(newListItem, movieList.childNodes[0]);
-        return movieList.innerHTML;
     }
+    return movieList.innerHTML;
 };
