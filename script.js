@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
     fetchPopularMovies();
-    displayPopMovies();
 })
 /**
  * holds info about the most popular movies from the api
@@ -26,13 +25,20 @@ function fetchPopularMovies () {
     http.open('GET', movieURL, true);
     http.send();
 }
-
+/**
+ * 
+ * @param {Object} data - Parsed data from the api
+ */
 function addToPopMovieArray (data) {
     var moviesToShow = data.results;
     for (var i = 0; i < moviesToShow.length; i++) {
         var movieInfo = {
             title: moviesToShow[i].title,
+            originalTitle: moviesToShow[i].original_title,
             image: moviesToShow[i].poster_path,
+            rating: moviesToShow[i].vote_average,
+            desc: moviesToShow[i].overview,
+
         }
         popMovieArray.push(movieInfo);
         displayPopMovies(popMovieArray);
@@ -44,7 +50,7 @@ function displayPopMovies(moviePosters) {
     for (var i = 0; i < moviePosters.length; i++) {
         var newImg = document.createElement('img');
         newImg.id = 'moviePoster' + i;
-        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
+        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[1].image;
         movieList.appendChild(newImg);
         return movieList.innerHTML;
     }
