@@ -2,7 +2,9 @@ window.addEventListener('load', function () {
     fetchPopularMovies();
     displayPopMovies();
 })
-
+/**
+ * holds info about the most popular movies from the api
+ */
 var popMovieArray = [];
 /**
  * simple http request to get the most popular movies
