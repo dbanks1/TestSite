@@ -60,7 +60,7 @@ function displayPopMovies(popMovieArray) {
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
         document.getElementById(newListItem.id).addEventListener('click', function () {
-            console.log(movieInfo[i]);
+            console.log(popMovieArray[i]);
         });
     }
     return movieList.innerHTML;
