@@ -22,5 +22,5 @@ ul li img {
 }
 
 #movieList {
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
