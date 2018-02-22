@@ -35,8 +35,8 @@ function addToPopMovieArray (data) {
         var movieInfo = {
             title: moviesToShow[i].title,
             originalTitle: moviesToShow[i].original_title,
-            image: moviesToShow[i].poster_path,
-            backdrop: moviesToShow[i].backdrop_path,
+            image: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + moviesToShow[i].poster_path,
+            backdrop: 'https://image.tmdb.org/t/p/w1400_and_h450_face' + moviesToShow[i].backdrop_path,
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
         }
@@ -56,7 +56,7 @@ function displayPopMovies(popMovieArray) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newImg.id = i;
-        newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
+        newImg.src = popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
         document.getElementById(newImg.id).onclick = focusMovie;
