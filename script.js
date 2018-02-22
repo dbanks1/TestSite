@@ -63,7 +63,11 @@ function displayPopMovies(popMovieArray) {
     }
     return movieList.innerHTML;
 };
-
+/**
+ * displays the info about the movie that has been clicked on
+ * also displays a backdrop image behind the information
+ * @param {Object} e - Event object
+ */
 function focusMovie (e) {
     var listId = e.target.id;
     document.getElementById('movieFocus').style.backgroundImage = 'url(' + popMovieArray[listId].backdrop + ')';
