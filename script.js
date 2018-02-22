@@ -1,7 +1,5 @@
 window.addEventListener('load', function () {
     fetchPopularMovies();
-    document.getElementById('btnLeft').onclick = scrollLeft;
-    document.getElementById('btnRight').onclick = scrollRight;
 })
 /**
  * holds info about the most popular movies from the api
@@ -78,12 +76,4 @@ function focusMovie (e) {
     document.getElementById('movieRating').innerHTML = popMovieArray[listId].rating;
     document.getElementById('movieDesc').innerHTML = popMovieArray[listId].desc;
     console.log('response ' + listId);
-}
-
-function scrollLeft () {
-    
-}
-
-function scrollRight () {
-    window.scrollTo(500, 0);
 }
