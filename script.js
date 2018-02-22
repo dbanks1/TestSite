@@ -59,12 +59,9 @@ function displayPopMovies(popMovieArray) {
         newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
-        document.getElementById(newListItem.id).onclick = focusMovie;
+        document.getElementById(newListItem.id).addEventListener('click', function () {
+            console.log(movieInfo[i]);
+        });
     }
     return movieList.innerHTML;
 };
-
-function focusMovie (e) {
-    var listId = e.target.id;
-
-}
