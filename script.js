@@ -48,15 +48,15 @@ function addToPopMovieArray (data) {
  * displays the movies by creating a new li element for each one
  * the image source comes from the movie database
  * i think the base url is universal and just needs a path from the api
- * @param {Array} popMovieArray - An array of trimmed movie data
+ * @param {Array} movieArray - An array of trimmed movie data
  */
-function displayPopMovies(popMovieArray) {
+function displayPopMovies(movieArray) {
     var movieList = document.getElementById('movieList');
-    for (var i = 0; i < popMovieArray.length; i++) {
+    for (var i = 0; i < movieArray.length; i++) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
-        newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
+        newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + movieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
         document.getElementById(newListItem.id).addEventListener('click', function () {
