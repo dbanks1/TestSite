@@ -28,3 +28,8 @@ li {
   overflow-x: scroll;
   padding: 0 0 200px 0;
 }
+
+#movieFocus {
+  width: 100%;
+  height: 500px;
+}
