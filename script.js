@@ -36,6 +36,7 @@ function addToPopMovieArray (data) {
             title: moviesToShow[i].title,
             originalTitle: moviesToShow[i].original_title,
             image: moviesToShow[i].poster_path,
+            backdrop: moviesToShow[i].
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
         }
@@ -55,9 +56,15 @@ function displayPopMovies(popMovieArray) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
         newListItem.id = 'moviePoster' + i;
-        newImg.src = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + popMovieArray[i].image;
+        newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
+        document.getElementById(newListItem.id).onclick = focusMovie;
     }
     return movieList.innerHTML;
 };
+
+function focusMovie (e) {
+    var listId = e.target.id;
+
+}
