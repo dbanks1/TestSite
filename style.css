@@ -21,10 +21,12 @@ ul li img {
     height: 120px;
 }
 
-#movieListWrapper {
-  overflow: hidden;
+#movieList {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-#movieList {
-  overflow-x: scroll;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
