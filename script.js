@@ -59,7 +59,7 @@ function displayPopMovies(popMovieArray) {
         newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
-        document.getElementById(newListItem.id).onclick = focusMovie;
+        document.getElementById(newImg.id).onclick = focusMovie;
     }
     return movieList.innerHTML;
 };
