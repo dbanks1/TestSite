@@ -66,6 +66,6 @@ function displayPopMovies(popMovieArray) {
 
 function focusMovie (e) {
     var listId = e.target.id;
-    document.getElementById('movieFocus').style.backgroundImage = popMovieArray[listId].backdrop;
+    document.getElementById('movieFocus').style.backgroundImage = url(popMovieArray[listId].backdrop);
     console.log('response ' + listId);
 }
