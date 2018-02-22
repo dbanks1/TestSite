@@ -36,7 +36,7 @@ function addToPopMovieArray (data) {
             title: moviesToShow[i].title,
             originalTitle: moviesToShow[i].original_title,
             image: moviesToShow[i].poster_path,
-            //backdrop: moviesToShow[i].
+            backdrop: moviesToShow[i].backdrop_path,
             rating: moviesToShow[i].vote_average,
             desc: moviesToShow[i].overview,
         }
