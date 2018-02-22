@@ -20,3 +20,7 @@ ul li img {
     width: 80px;
     height: 120px;
 }
+
+#movieList {
+  overflow-x: scroll;
+}
