@@ -23,12 +23,12 @@ ul li img {
 
 #movieListWrapper {
   width: 100%;
-  height: 100%;
+  height: 200px;
   overflow: hidden;
 }
 
 #movieList {
   width: 100%;
   height: 100%;
-  overflow-x: scroll;
+  overflow: auto;
 }
