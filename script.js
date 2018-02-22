@@ -67,5 +67,9 @@ function displayPopMovies(popMovieArray) {
 function focusMovie (e) {
     var listId = e.target.id;
     document.getElementById('movieFocus').style.backgroundImage = 'url(' + popMovieArray[listId].backdrop + ')';
+    document.getElementById('movieTitle').innerHTML = popMovieArray[listId].title;
+    document.getElementById('originTitle').innerHTML = popMovieArray[listId].originalTitle;
+    document.getElementById('movieRating').innerHTML = popMovieArray[listId].rating;
+    document.getElementById('movieDesc').innerHTML = popMovieArray[listId].desc;
     console.log('response ' + listId);
 }
