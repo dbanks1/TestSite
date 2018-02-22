@@ -55,7 +55,7 @@ function displayPopMovies(popMovieArray) {
     for (var i = 0; i < popMovieArray.length; i++) {
         var newListItem = document.createElement('li');
         var newImg = document.createElement('img');
-        newListItem.id = 'moviePoster' + i;
+        newImg.id = i;
         newImg.src = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + popMovieArray[i].image;
         newListItem.appendChild(newImg);
         movieList.appendChild(newListItem);
