@@ -66,5 +66,5 @@ function displayPopMovies(popMovieArray) {
 
 function focusMovie (e) {
     var listId = e.target.id;
-    console.log('response' + listId);
+    console.log('response ' + listId);
 }
